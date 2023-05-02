@@ -80,45 +80,45 @@ const OrderScreen = ({ match }) => {
     
     useEffect(() => {
       if(order) {
-        let date = new Date();
-        let getD = new Date(order.paidAt);
-        let updatedObject = {
-          orderDate: Date.UTC(
-            getD.getFullYear(),
-            getD.getMonth(),
-            getD.getDate(),
-            getD.getHours(),
-            getD.getMinutes(),
-            getD.getSeconds(),
-            getD.getMilliseconds()
-          ),
-          finalDate: orderDate + (7 *1000 * 60 * 60 * 24),
-        }
-        setReturnDate({
-          ...returnDate,
-          ...updatedObject,
-        })
-        console.log(returnDate);
+        // let date = new Date();
+        // let getD = new Date(order.paidAt);
+        // let updatedObject = {
+        //   orderDate: Date.UTC(
+        //     getD.getFullYear(),
+        //     getD.getMonth(),
+        //     getD.getDate(),
+        //     getD.getHours(),
+        //     getD.getMinutes(),
+        //     getD.getSeconds(),
+        //     getD.getMilliseconds()
+        //   ),
+        //   finalDate: orderDate + (7 *1000 * 60 * 60 * 24),
+        // }
+        // setReturnDate({
+        //   ...returnDate,
+        //   ...updatedObject,
+        // })
+        // console.log(returnDate);
         if(order._id !== id) {
-          let date = new Date();
-          let getD = new Date(order.paidAt);
-          let updatedObject = {
-            orderDate: Date.UTC(
-              getD.getFullYear(),
-              getD.getMonth(),
-              getD.getDate(),
-              getD.getHours(),
-              getD.getMinutes(),
-              getD.getSeconds(),
-              getD.getMilliseconds()
-            ),
-            finalDate: date.getTime() + (5 *1000 * 60 * 60 * 24),
-          }
-          setReturnDate({
-            ...returnDate,
-            ...updatedObject,
-          })
-          console.log(returnDate);
+          // let date = new Date();
+          // let getD = new Date(order.paidAt);
+          // let updatedObject = {
+          //   orderDate: Date.UTC(
+          //     getD.getFullYear(),
+          //     getD.getMonth(),
+          //     getD.getDate(),
+          //     getD.getHours(),
+          //     getD.getMinutes(),
+          //     getD.getSeconds(),
+          //     getD.getMilliseconds()
+          //   ),
+          //   finalDate: date.getTime() + (5 *1000 * 60 * 60 * 24),
+          // }
+          // setReturnDate({
+          //   ...returnDate,
+          //   ...updatedObject,
+          // })
+          // console.log(returnDate);
           dispatch(getOrderDetails(orderId));
         }
       }

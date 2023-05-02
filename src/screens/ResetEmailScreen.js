@@ -8,7 +8,7 @@ import { resetPasswordEmail } from "./../Redux/Actions/userActions";
  import { Formik, useFormik } from "formik";
  import { resetPasswordEmailSchemaValidation } from "../schema"
 import { USER_EMAIL_RESET_PASSWORD_RESET } from "../Redux/Constants/UserContants";
-const ResetEmailScreen = () => {
+const ResetEmailScreen = ({location}) => {
   const [borderbtm_log, setborderbotm_log] = useState("4px solid white");
   const [borderbtm_reg, setborderbotm_reg] = useState("4px solid white");
   const myComponentStyle_register = {
@@ -72,7 +72,7 @@ const form={
     }, 5000)
 
     return () => clearTimeout(timer);
-  }, [message, history, error]);
+  }, [message, error]);
 
   const submitHandler = ({email}) => {
     console.log(email)

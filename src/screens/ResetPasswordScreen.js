@@ -99,7 +99,7 @@ const form={
   }, [message, history, redirect, validUrl, param, success]);
 
   const submitHandler = (password, id) => {
-    console.log(password,confirmPassword)
+    console.log(password)
     dispatch(resetPassword({password: password, id: id}));
   };
 
