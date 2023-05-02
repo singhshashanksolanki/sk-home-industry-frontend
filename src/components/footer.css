@@ -1,0 +1,26 @@
+._1info {
+    padding: 40px;
+    padding-left: 50px;
+
+
+}
+
+.pra {
+    text-align: justify;
+}
+
+._2contact {
+    padding: 40px;
+}
+
+.h {
+    margin-bottom: 30px;
+}
+
+
+/* responsive ness */
+@media (max-width: 768px) {
+    .data {
+        flex-direction: column;
+    }
+}
