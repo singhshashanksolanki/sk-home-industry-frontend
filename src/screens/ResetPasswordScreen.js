@@ -81,7 +81,7 @@ const form={
     }
     const verifyEmailUrl = async() => {
         try {
-            const url = `/api/users/${param.id}/resetPassword/${param.token}`;
+            const url = `${process.env.REACT_APP_SERVER_URL}/api/users/${param.id}/resetPassword/${param.token}`;
             const {data} = await axios.get(url);
             console.log(data)
             setValidUrl(true)

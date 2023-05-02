@@ -123,7 +123,7 @@ const OrderScreen = ({ match }) => {
         }
       }
       const addPayPalScript = async () => {
-        const { data: clientId } = await axios.get("/api/config/paypal");
+        const { data: clientId } = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/config/paypal`);
         const script = document.createElement("script");
         script.type = "text/javascript";
         script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}`;
@@ -178,7 +178,7 @@ const OrderScreen = ({ match }) => {
         return
       }
   
-      const {data} = await axios.post(`/api/orders/razorpay/${orderId}`);
+      const {data} = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/orders/razorpay/${orderId}`);
       
 
       const options = {

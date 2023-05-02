@@ -111,7 +111,7 @@ const PlaceOrderScreen = ({ history }) => {
         number: userInfo.number,
         totalPrice: cart.totalPrice
       }
-      const {data} = await axios.post(`/api/orders/razorpay`, razorpayData);
+      const {data} = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/orders/razorpay`, razorpayData);
       
   
       const options = {

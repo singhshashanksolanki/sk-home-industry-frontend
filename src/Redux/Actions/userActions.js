@@ -38,7 +38,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `/api/users/login`,
+      `${process.env.REACT_APP_SERVER_URL}/api/users/login`,
       { email, password },
       config
     );
@@ -76,7 +76,7 @@ export const register = (name, email, password, number) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `/api/users`,
+      `${process.env.REACT_APP_SERVER_URL}/api/users`,
       { name, email, password, number },
       config
     );
@@ -107,7 +107,7 @@ export const resetPasswordEmail = (email) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `/api/users/resetPassword`,
+      `${process.env.REACT_APP_SERVER_URL}/api/users/resetPassword`,
       { email },
       config
     );
@@ -140,7 +140,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`/api/users/${id}`, config);
+    const { data } = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/users/${id}`, config);
     dispatch({ type: USER_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     const message =
@@ -173,7 +173,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.put(`/api/users/profile`, user, config);
+    const { data } = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/users/profile`, user, config);
     dispatch({ type: USER_UPDATE_PROFILE_SUCCESS, payload: data });
     dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
 
@@ -209,7 +209,7 @@ export const updateUserImage = (user) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.put(`/api/users/image`, user, config);
+    const { data } = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/users/image`, user, config);
     dispatch({ type: USER_UPDATE_IMAGE_SUCCESS, payload: data });
     dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
 
@@ -240,7 +240,7 @@ export const resetPassword = (user) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.put(`/api/users/passwordReset/${user.id}`, user, config);
+    const { data } = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/users/passwordReset/${user.id}`, user, config);
     dispatch({ type: USER_PASSWORD_RESET_SUCCESS, payload: data });
     // dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
 
