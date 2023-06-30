@@ -13,8 +13,8 @@ const Footer = () => {
        <div className="_2contact" style={{flex:"3"}}>
        <h1 className="h">Contact Us</h1>
         <ul>
-           <li><a href="tel:8494090499">+91 8494090499</a></li>
-           <li><a href="mailto:shashanksinghsolanki1@gmail.com">shashanksinghsolanki1@gmail.com</a></li>
+           <li><a href="tel:8494090499">+91 7770821989</a></li>
+           <li><a href="mailto:shashanksinghsolanki1@gmail.com">sachet0985@gmail.com</a></li>
            
         </ul>
         <div className="justify-content-center d-flex" >
