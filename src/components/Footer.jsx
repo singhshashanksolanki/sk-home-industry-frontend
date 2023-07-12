@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="justify-content-center d-flex data">
        <div className="_1info" style={{flex:"6"}}>
        <h1 className="h">About us</h1>
-        <p className="pra">adfadfadf Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur praesentium vitae, cum vero nesciunt voluptates, ipsa optio, nostrum porro maiores accusamus magnam aperiam magni quis iusto illum. Dolores quis obcaecati cupiditate maxime, blanditiis quisquam voluptate fugiat deleniti? Accusamus ad nulla voluptatem quis. Voluptatum, incidunt nemo.</p>
+        <p className="pra">Vision  :- To create a brand that is  synonymous with natural high quality incense sticks that promote wellness and mindfulness. Additionally the company could aim to became a leader in the industry by using sustainable materials and environment friendly practices.</p>
        </div>
        <div className="_2contact" style={{flex:"3"}}>
        <h1 className="h">Contact Us</h1>
